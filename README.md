@@ -1,6 +1,6 @@
 # Asset Allocation Application
 
-This document provides instructions for deploying the Asset Allocation Application on a Linux server.
+This document provides instructions for deploying the Asset Allocation Application on a Linux server (Centos 9).
 
 ## Deployment Instructions
 
