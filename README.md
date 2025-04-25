@@ -9,6 +9,7 @@ To deploy the Asset Allocation Application, follow the steps below:
 ### Prerequisites
 
 - Ensure you are in `root` user on the server.
+- Port `81` should be open for HTTP traffic and not listening on any other service.
 
 ### Steps to Deploy the Application
 
