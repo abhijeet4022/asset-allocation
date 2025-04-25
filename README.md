@@ -14,12 +14,12 @@ To deploy the Asset Allocation Application, follow the steps below:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/abhijeet4022/asset-allocation.git /App/asset-allocation
+   git clone https://github.com/abhijeet4022/asset-allocation.git /tmp/asset-allocation
    ```
 
 2. **Navigate to Application Directory**
    ```bash
-   cd /App/asset-allocation
+   cd /tmp/asset-allocation
    ```
 
 3. **Execute Deployment Script**
