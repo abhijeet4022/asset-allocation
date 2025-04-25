@@ -121,7 +121,7 @@ nginx -t >> "$LOG_FILE" 2>&1
 check_status "Nginx configuration test failed" "Nginx configuration test passed"
 
 log "Starting Nginx..." "$YELLOW"
-systemctl start nginx >> "$LOG_FILE" 2>&1
+systemctl restart nginx >> "$LOG_FILE" 2>&1
 systemctl enable nginx >> "$LOG_FILE" 2>&1
 check_status "Failed to start Nginx" "Nginx started successfully"
 
