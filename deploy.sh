@@ -23,6 +23,9 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Create log directory
+if [ -d "/var/log/calculator-deploy" ]; then
+    rm -rf /var/log/calculator-deploy
+fi
 mkdir -p /var/log/calculator-deploy
 LOG_FILE="/var/log/calculator-deploy/deploy-$(date +'%Y%m%d-%H%M%S').log"
 
