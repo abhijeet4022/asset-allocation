@@ -27,7 +27,9 @@ To deploy the Asset Allocation Application, follow the steps below:
    ```bash
    sudo bash deploy.sh
    ```
-## Application is now accessible at: `http://$(hostname -I | awk '{print $1}'):81"`
-
+### Application is now accessible at: 
+```bash
+   echo "http://$(hostname -I | awk '{print $1}'):81"
+```
 
 This script will handle all necessary deployment steps, including setting up the application, configuring the environment, and starting services.
