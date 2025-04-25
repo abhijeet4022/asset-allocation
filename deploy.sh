@@ -75,12 +75,18 @@ check_status "Failed to install Nginx" "Nginx installed successfully"
 
 # Create and setup web directory
 log "Setting up web directory..." "$YELLOW"
+if [ -d "/var/www/sip-calculator" ]; then
+    rm -rf /var/www/sip-calculator
+fi
 mkdir -p /var/www/sip-calculator
 cp -r /App/asset-allocation/dist/* /var/www/sip-calculator/ >> "$LOG_FILE" 2>&1
 check_status "Failed to copy files" "Files copied successfully"
 
 # Configure Nginx
 log "Configuring Nginx..." "$YELLOW"
+#if [ -f "/etc/nginx/conf.d/calculator.conf" ]; then
+#    rm -rf /etc/nginx/conf.d/calculator.conf
+#fi
 cat > /etc/nginx/conf.d/calculator.conf << 'EOF'
 server {
     listen 80;
