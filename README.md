@@ -8,7 +8,7 @@ To deploy the Asset Allocation Application, follow the steps below:
 
 ### Prerequisites
 
-- Ensure you have `sudo` privileges on the server.
+- Ensure you are in `root` user on the server.
 
 ### Steps to Deploy the Application
 
