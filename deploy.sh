@@ -124,12 +124,12 @@ check_status "Failed to start Nginx" "Nginx started successfully"
 
 # Configure firewall
 log "Configuring firewall..." "$YELLOW"
-if command -v firewall-cmd >/dev/null 2>&1; then
+if systemctl is-active --quiet firewalld >/dev/null 2>&1; then
     firewall-cmd --permanent --add-service=http >> "$LOG_FILE" 2>&1
     firewall-cmd --reload >> "$LOG_FILE" 2>&1
     check_status "Failed to configure firewall" "Firewall configured successfully"
 else
-    log "Firewall not installed, skipping configuration" "$YELLOW"
+    log "firewalld is not active, skipping firewall configuration" "$YELLOW"
 fi
 
 # Get server IP
