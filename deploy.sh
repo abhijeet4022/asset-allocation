@@ -62,7 +62,7 @@ npm install >> "$LOG_FILE" 2>&1
 check_status "Failed to install dependencies" "Dependencies installed successfully"
 
 log "Building application..." "$YELLOW"
-npx update-browserslist-db@latest -y >> "$LOG_FILE" 2>&1
+CI=true npx update-browserslist-db@latest -y >> "$LOG_FILE" 2>&1
 npm run build >> "$LOG_FILE" 2>&1
 check_status "Failed to build application" "Application built successfully"
 
