@@ -129,6 +129,7 @@ check_status "Failed to start Nginx" "Nginx started successfully"
 log "Configuring firewall..." "$YELLOW"
 if systemctl is-active --quiet firewalld >/dev/null 2>&1; then
     firewall-cmd --permanent --add-service=http >> "$LOG_FILE" 2>&1
+    firewall-cmd --permanent --add-port=81/tcp >> "$LOG_FILE" 2>&1
     firewall-cmd --reload >> "$LOG_FILE" 2>&1
     check_status "Failed to configure firewall" "Firewall configured successfully"
 else
