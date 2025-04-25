@@ -89,7 +89,7 @@ log "Configuring Nginx..." "$YELLOW"
 #fi
 cat > /etc/nginx/conf.d/calculator.conf << 'EOF'
 server {
-    listen 80;
+    listen 81;
     server_name localhost;
 
     root /var/www/sip-calculator;
@@ -137,5 +137,5 @@ SERVER_IP=$(hostname -I | awk '{print $1}')
 
 # Final success message
 log "Deployment completed successfully!" "$GREEN"
-log "Application is now accessible at: http://$SERVER_IP" "$GREEN"
+log "Application is now accessible at: http://$SERVER_IP:81" "$GREEN"
 log "Deployment log available at: $LOG_FILE" "$GREEN"
